@@ -22,4 +22,10 @@ function createHome(){
 
 }
 
-export default createHome
+function loadHome(){
+    const main = document.querySelector('.main')
+    main.textContent = ""
+    main.appendChild(createHome())
+}
+
+export default loadHome

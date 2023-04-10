@@ -47,6 +47,9 @@ body{
 .nav-content li:hover{
     color: rgb(157, 89, 5);
 }
+.nav-content .active{
+    color: rgb(157, 89, 5);
+}
 .home{
     height: 70vh;
     display: flex;
@@ -111,9 +114,19 @@ footer{
 }
 .menu-card > img {
     max-height: 250px;
+    width: 200px;
     background-size: contain;
 }
 .menu-card p{
     background: rgba(110, 110, 110, 0.8);
     padding: 8px 12px;
+}
+.contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.info p:first-of-type{
+    margin-bottom: 20px;
 }
