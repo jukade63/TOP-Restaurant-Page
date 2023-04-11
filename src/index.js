@@ -2,6 +2,8 @@ import "./style.css";
 import loadHome from "./home";
 import loadMenu from "./menu";
 import createNavBar from "./navbar";
+import loadContact from "./contact";
+import createFooter from "./footer";
 
 
 function setActiveTab(tab) {
@@ -19,6 +21,9 @@ function initApp() {
   const content = document.getElementById("content");
   content.appendChild(createNavBar());
   content.appendChild(createMain());
+  content.appendChild(createFooter())
+  const homeTab = document.querySelector('.nav-content li')
+  setActiveTab(homeTab)
   setUpNavbarControl()
   loadHome();
 
@@ -35,6 +40,8 @@ function setUpNavbarControl() {
         loadHome();
       } else if (e.target.textContent === "Menu") {
         loadMenu();
+      } else if (e.target.textContent === "Contact") {
+        loadContact();
       }
     });
   });
